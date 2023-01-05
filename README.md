@@ -29,4 +29,4 @@
   <li>User session management.</li>
   <li>Page to show recent orders. Since there is no login, maybe an order lookup page requiring purchase email and order id.</li>
 </ul>
-<p>*Features will regularly be updated.</p>
+<p><i>*Features will be updated regularly.</i></p>
