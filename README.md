@@ -1,27 +1,32 @@
-# Cardapp
+<h1>Book Store</h1>
+<h2>Overview</h2>
+<p>This is a relatively simple application that allows a user to purchase books from an online store, and fill out contact/shipping information to determine where the order is sent (similar to Shopify). Application currently doesn't persist information.</p>
+<h2>Technologies Used</h2>
+<ul>
+  <li>Angular - Simplifies single page application development.</li>
+  <li>TypeScript - Similar to JavaScript. Using for better autocompletion.</li>
+  <li>Bootstrap - Easier to format HTML elements with responsiveness.</li>
+  <li>css - Used for minor element styling.</li>
+  <li>HTML</li>
+</ul>
+<h2>Technologies Needing Implementation</h2>
+<ul>
+  <li>ASP.net for WebAPI - Easy way to create endpoints for database access.</li>
+  <li>Microsoft SQL Server - RDBMS</li>
+  <li>Something for session handling.</li>
+</ul>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h2>Current Features</h2>
+<ul>
+  <li>Item page where user can add items to cart.</li>
+  <li>Cart page where user can see their item quantities, prices, and total cost.</li>
+  <li>Checkout page where user enters contact information used for shipping/tracking purposes.</li>
+</ul>
+<h2>Features Needing Implementation</h2>
+<ul>
+  <li>API to retrieve books to display on the product page and to store purchase order information.</li>
+  <li>Page to display when the user hasn't added any products to their cart (cart is empty page).</li>
+  <li>User session management.</li>
+  <li>Page to show recent orders. Since there is no login, maybe an order lookup page requiring purchase email and order id.</li>
+</ul>
+<p>*Features will regularly be updated.</p>
