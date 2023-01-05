@@ -1,0 +1,81 @@
+<form [formGroup]="form" class="card p-3 bg-light mt-5 m-auto w-75" (ngSubmit)="onSubmit()">
+    <div class="row" style="max-height:50%">
+        <div class="col-8">
+        <fieldset class="border p-2 m-2">
+            <legend class="w-auto">Contact</legend>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" class="form-control" formControlName="firstName" type="text">
+                    <div class="inputError" *ngIf="firstName.errors && firstName.touched">
+                        <div *ngIf="firstName.errors['required']">First name is required.</div>
+                        <div *ngIf="firstName.errors['minlength']">First name must be at least {{firstName.errors['minlength'].requiredLength}} letters long.</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" class="form-control" formControlName="lastName" type="text">
+                    <div class="inputError" *ngIf="lastName.errors && lastName.touched">
+                        <div *ngIf="lastName.errors['required']">Last name is required.</div>
+                        <div *ngIf="lastName.errors['minlength']">Last name must be at least {{lastName.errors['minlength'].requiredLength}} letters long.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" class="form-control" formControlName="email" type="email">
+                <div class="inputError" *ngIf="email.errors && email.touched">
+                    <div *ngIf="email.errors['required']">Email is required.</div>
+                    <div *ngIf="email.errors['email']">Email format is incorrect.</div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="border p-2 m-2" formGroupName="address">
+            <legend class="w-auto">Location</legend>
+            <div class="row">
+                <div class="form-group col-10">
+                    <label for="street">Street Address</label>
+                    <input class="form-control" id="street" formControlName="street" type="text">
+                    <div class="inputError" *ngIf="street.errors && street.touched">
+                        <div *ngIf="street.errors['required']">Street is required.</div>
+                    </div>
+                </div>
+                <div class="form-group col-2">
+                    <label for="state">State</label>
+                    <select class="form-control" formControlName="state">
+                        <option></option>
+                        <option *ngFor="let state of states" [value]="state">{{state}}</option>
+                    </select>
+                    <div class="inputError" *ngIf="state.errors && state.touched">
+                        <div *ngIf="state.errors['required']">State is required.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-8">
+                    <label for="zip">Zip Code</label>
+                    <input id="zip" class="form-control" formControlName="zipcode" type="text">
+                    <div class="inputError" *ngIf="zipcode.errors && zipcode.touched">
+                        <div *ngIf="zipcode.errors['required']">Zip code is required.</div>
+                    </div>
+                </div>
+                
+                <div class="form-group col">
+                    <label for="city">City</label>
+                    <input id="city" class="form-control" formControlName="city" type="text">
+                    <div class="inputError" *ngIf="city.errors && city.touched">
+                        <div *ngIf="city.errors['required']">City is required.</div>
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+        </div>
+        <div class="col border p-2 m-2"  style="max-height:380px; overflow-y:scroll">
+            <ul>
+                <li *ngFor="let item of items">{{item.qty}}</li>
+            </ul>
+        </div>        
+    </div>
+    <button class="btn btn-success" type="submit" [disabled]="!form.valid">Submit</button>
+</form>

@@ -1,0 +1,22 @@
+span {
+    display: block;
+}
+
+
+.itemTitle {
+    font-size: 1.5em;
+}
+
+.itemImage {
+    width: 200px;
+    height: 200px;
+    flex: 0 1 200px;
+}
+
+.itemTotal {
+    font-weight: bold;
+}
+
+.item {
+    margin: 1.5em 0 1.5 0;
+}

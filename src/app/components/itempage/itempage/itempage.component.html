@@ -1,0 +1,5 @@
+<div class="row"> 
+    <div class="col-md-6 col-lg-4 mt-3 mb-3" *ngFor="let item of items">
+        <item [itemObj]="item" (addItemEvent)="addItem($event)"></item>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<ul class="list-group list-group-flush item-list" *ngIf="cartItems.length > 0; else noItems">
+    <li class="list-group-item flex-row d-flex justify-content-between item" *ngFor="let item of cartItems">
+            <div class="flex-column h-100">
+                <span class="itemTitle">{{item.item.title}}</span>
+                <span class="">{{item.item.price | currency}} x ({{item.qty}})</span>
+                <span class="itemTotal">{{(item.item.price*item.qty) | currency}}</span>
+                <qtybtn class="justify-self-end" [qty]="item.qty" (qtyChangeEvent)="updateItemCount($event,item)"></qtybtn>
+            </div>
+                <div class="d-flex justify-content-center">
+                    <img class="itemImage" [src]="item.item.itemImg"/>
+                </div>
+    </li>
+    <div class="d-flex justify-content-between align-content-center">
+        <p>Total:</p>
+        <p class="total">{{total | currency}}</p>
+    </div>
+    <hr/>
+    <div class="d-flex">
+        <button class="btn btn-success col-6 m-auto" routerLink="checkout">Checkout</button>
+    </div>
+    <hr>
+</ul>
+<ng-template #noItems>No items</ng-template>
