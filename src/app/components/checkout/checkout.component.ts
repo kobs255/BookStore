@@ -16,7 +16,8 @@ export class CheckoutComponent {
       'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
       'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI',
       'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY'];
-      
+
+
   constructor(private itemService: ItemService, private fb: FormBuilder) {
     this.items = itemService.cartedItems;
     this.form = fb.group({
