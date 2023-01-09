@@ -11,14 +11,24 @@ export class ItempageComponent {
 
   //stores items grabbed from persistent storage
   items: Item[] = [];
-
+  filteredArr: Item[] = [];
   constructor(private itemService: ItemService) {
     this.items = this.itemService.getItems();
   }
 
-  
+
   addItem(item: Item) {
     this.itemService.addItem(item);
+  }
+
+  filterView(filterVal: HTMLInputElement) {
+    let { value } = filterVal;
+    value = value.toLowerCase();
+    if (value.trim() != "")
+      this.filteredArr = this.items.filter(item => item.title.toLowerCase().includes(value));
+    else
+      this.filteredArr = [];
+    this.items = this.itemService.getItems();
   }
 }
 

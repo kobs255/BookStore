@@ -1,5 +1,17 @@
-<div class="row"> 
+<div class="search d-flex pt-3">
+    <input #currentVal placeholder="Search" class="form-control"/>
+    <button class="btn btn-secondary" (click)="filterView(currentVal)">Search</button>
+</div>
+<div class="row" *ngIf="filteredArr.length == 0; else filter"> 
     <div class="col-md-6 col-lg-4 mt-3 mb-3" *ngFor="let item of items">
         <item [itemObj]="item" (addItemEvent)="addItem($event)"></item>
     </div>
 </div>
+
+<ng-template #filter> 
+    <div class="row">
+        <div class="col-md-6 col-lg-4 mt-3 mb-3" *ngFor="let item of filteredArr">
+            <item [itemObj]="item" (addItemEvent)="addItem($event)"></item>
+        </div>
+    </div>
+</ng-template>
