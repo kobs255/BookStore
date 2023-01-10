@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Item } from '../models/Item';
-import { ItemService } from '../services/item.service';
+import { Item } from '../../models/Item';
+import { ItemService } from '../../services/item.service';
 
 @Component({
   selector: 'pagination',
