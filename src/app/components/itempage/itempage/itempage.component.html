@@ -3,9 +3,10 @@
     <button class="btn btn-secondary" (click)="filterView(currentVal)">Search</button>
 </div>
 <div class="row" *ngIf="filteredArr.length == 0; else filter"> 
-    <div class="col-md-6 col-lg-4 mt-3 mb-3" *ngFor="let item of items">
+    <div class="col-md-6 col-lg-4 mt-3 mb-3" *ngFor="let item of paginatedItems">
         <item [itemObj]="item" (addItemEvent)="addItem($event)"></item>
     </div>
+    <pagination (setPage)="paginate($event)" [itemsPerPage]="itemsPerPage"></pagination>
 </div>
 
 <ng-template #filter> 
@@ -15,5 +16,3 @@
         </div>
     </div>
 </ng-template>
-
-<pagination [bookArray]="items"></pagination>
