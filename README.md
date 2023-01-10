@@ -22,10 +22,10 @@
   <li>Cart page where user can see their item quantities, prices, and total cost.</li>
   <li>Checkout page where user enters contact information used for shipping/tracking purposes.</li>
   <li>Simple search feature to filter results.</li>
+  <li>Pagination on store page</li>
 </ul>
 <h2>Features Needing Implementation (in order of priority)</h2>
 <ul>
-  <li>Pagination on store page</li>
   <li>Page to display when the user hasn't added any products to their cart (cart is empty page).</li>
   <li>API to retrieve books to display on the product page and to store purchase order information.</li>
   <li>User session management.</li>
