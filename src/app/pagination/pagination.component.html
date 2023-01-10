@@ -1,0 +1,8 @@
+<ng-template *ngIf="bookCount > itemsPerPage">
+    <ul class="pagination justify-content-end">
+        <li class="page-item" (click)="currentPage = currentPage - 1" [ngClass]="{disabled: currentPage === 1}"><a class="page-link">Previous</a></li>
+        <li *ngFor="let page in maxPages; let i = index"><a class="page-link">{{i}}</a></li>
+        <li class="page-item" [ngClass]="{disabled: currentPage === bookCount-1}" (click)="currentPage = currentPage + 1"><a class="page-link">Next</a></li>
+      </ul>
+
+</ng-template>

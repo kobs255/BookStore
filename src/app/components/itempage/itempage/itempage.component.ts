@@ -11,6 +11,7 @@ export class ItempageComponent {
 
   //stores items grabbed from persistent storage
   items: Item[] = [];
+  //Stores filtered items. Wanted to avoid directly manipulating the array above.
   filteredArr: Item[] = [];
   constructor(private itemService: ItemService) {
     this.items = this.itemService.getItems();
@@ -24,10 +25,12 @@ export class ItempageComponent {
   filterView(filterVal: HTMLInputElement) {
     let { value } = filterVal;
     value = value.toLowerCase();
+
     if (value.trim() != "")
       this.filteredArr = this.items.filter(item => item.title.toLowerCase().includes(value));
     else
       this.filteredArr = [];
+
     this.items = this.itemService.getItems();
   }
 }

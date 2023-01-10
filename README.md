@@ -23,12 +23,12 @@
   <li>Checkout page where user enters contact information used for shipping/tracking purposes.</li>
   <li>Simple search feature to filter results.</li>
 </ul>
-<h2>Features Needing Implementation</h2>
+<h2>Features Needing Implementation (in order of priority)</h2>
 <ul>
-  <li>API to retrieve books to display on the product page and to store purchase order information.</li>
+  <li>Pagination on store page</li>
   <li>Page to display when the user hasn't added any products to their cart (cart is empty page).</li>
+  <li>API to retrieve books to display on the product page and to store purchase order information.</li>
   <li>User session management.</li>
   <li>Page to show recent orders. Since there is no login, maybe an order lookup page requiring purchase email and order id.</li>
-  <li>Pagination on store page</li>
 </ul>
 <p><i>*Features will be updated regularly.</i></p>
