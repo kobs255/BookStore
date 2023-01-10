@@ -17,11 +17,11 @@ export class PaginationComponent implements OnInit {
 
   constructor(bookService: ItemService) {
     this.bookArray = bookService.getItems();
-    //Way to allow us to iterate over a "number" using ngFor
     console.log(this.bookArray.length / this.itemsPerPage)
   }
 
   ngOnInit(): void {
+    //Way to allow us to iterate over a "number" using ngFor
     this.maxPages = Array.from({ length: Math.ceil(this.bookArray.length / this.itemsPerPage) }, (v, k) => k + 1);
     console.log(this.maxPages);
   }
