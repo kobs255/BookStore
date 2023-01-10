@@ -23,12 +23,15 @@ export class PaginationComponent implements OnInit {
 
   ngOnInit(): void {
     this.maxPages = Array.from({ length: Math.ceil(this.bookArray.length / this.itemsPerPage) }, (v, k) => k + 1);
-
+    console.log(this.maxPages);
   }
 
   changePage(clickedPage: number) {
     this.currentPage = clickedPage;
-    this.setPage.emit(this.currentPage);
+    if (clickedPage >= 1 && clickedPage <= this.maxPages.length)
+      this.setPage.emit(this.currentPage);
+
+
   }
 
   get bookCount(): number {
