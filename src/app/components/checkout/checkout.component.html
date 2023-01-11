@@ -71,11 +71,20 @@
             </div>
         </fieldset>
         </div>
-        <div class="col border p-2 m-2"  style="max-height:380px; overflow-y:scroll">
-            <ul>
-                <li *ngFor="let item of items">{{item.qty}}</li>
-            </ul>
-        </div>        
+        <ng-container *ngIf="items.length > 0">
+            <div class="col border p-2 m-2"  style="max-height:380px; overflow-y:scroll; background-color:inherit;">
+                <CheckoutItems  [books]="items" [totalCost]="totalCost"></CheckoutItems>  
+            </div>
+            <div class="d-flex justify-content-between m-2">
+                <span>
+                    Total:
+                </span>
+                <span>
+                    {{totalCost | currency}}
+                </span>
+        </div>
+        </ng-container>
+
     </div>
     <button class="btn btn-success" type="submit" [disabled]="!form.valid">Submit</button>
 </form>

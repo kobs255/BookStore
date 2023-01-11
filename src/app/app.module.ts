@@ -13,6 +13,7 @@ import { SummaryPipe } from './pipes/summary.pipe';
 import { QtybtnComponent } from './components/qtybtn/qtybtn.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { CheckoutitemsComponent } from './components/checkoutitems/checkoutitems.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     QtybtnComponent,
     CheckoutComponent,
     PaginationComponent,
+    CheckoutitemsComponent,
   ],
   exports: [
 

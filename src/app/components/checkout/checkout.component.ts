@@ -10,6 +10,7 @@ import { CartItem, ItemService } from 'src/app/services/item.service';
 export class CheckoutComponent {
   form;
   items: CartItem[];
+  totalCost?: number;
   states =
     ['AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM',
       'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME',
@@ -20,6 +21,7 @@ export class CheckoutComponent {
 
   constructor(private itemService: ItemService, private fb: FormBuilder) {
     this.items = itemService.cartedItems;
+    this.totalCost = itemService.total;
     this.form = fb.group({
       firstName: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
       lastName: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],

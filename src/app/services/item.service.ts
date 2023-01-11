@@ -50,6 +50,14 @@ export class ItemService {
         console.log(this.cartedItems, this.cartCount$);
     }
 
+    get total() {
+        let cost = 0;
+        for (let item of this.cartedItems) {
+            cost += item.item.price * item.qty;
+        }
+        return cost;
+    }
+
     setCartItems(items: CartItem[]) {
         this.cartedItems = items;
     }

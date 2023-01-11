@@ -9,17 +9,10 @@ import { CartItem, ItemService } from 'src/app/services/item.service';
 })
 export class CartComponent {
   cartItems: CartItem[] = [];
+  totalCost?: number;
   constructor(private itemService: ItemService) {
     this.cartItems = itemService.cartedItems;
-  }
-
-
-  get total() {
-    let cost = 0;
-    for (let item of this.cartItems) {
-      cost += item.item.price * item.qty;
-    }
-    return cost;
+    this.totalCost = itemService.total;
   }
 
   updateItemCount(qty: number, item: CartItem) {

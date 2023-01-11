@@ -1,0 +1,18 @@
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let book of books">
+            <div class="row m-auto w-100" style="font-size:12px">
+                <div class="col-7">
+                    {{book?.item?.title}}
+                    <div class="row m-auto">
+
+                        {{book?.qty}} x {{book?.item?.price}}
+                    </div>
+                </div>
+                <div class="col-5">
+                    <img [src]="book?.item?.itemImg" width="75%" height="75%"/>
+                </div>
+            </div>
+        </li>
+    </ul>
+    
+
