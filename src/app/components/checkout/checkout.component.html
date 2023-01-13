@@ -72,8 +72,8 @@
         </fieldset>
         </div>
         <ng-container *ngIf="items.length > 0">
-            <div class="col border p-2 m-2"  style="max-height:380px; overflow-y:scroll; background-color:inherit;">
-                <CheckoutItems  [books]="items" [totalCost]="totalCost"></CheckoutItems>  
+            <div class="col border p-2 m-2"  style="max-height:380px; overflow-y:scroll;">
+                <CheckoutItems  [books]="items"></CheckoutItems>  
             </div>
             <div class="d-flex justify-content-between m-2">
                 <span>
