@@ -1,4 +1,4 @@
-<div class="card hovered d-flex">
+<div [routerLink]="item.id" class="card hovered d-flex">
     <div class="card-body">
       <h5 class="card-title title">{{item.title}}</h5>
       <div class="d-flex align-items-center">
@@ -7,7 +7,7 @@
       <p class="card-text desc">{{item.description | summary}}</p>
       <div class="d-flex flex-column align-content-end">
         <p class="card-text align-self-center"><i>{{item.price | currency}}</i></p>
-        <button class="btn btn-sm btn-outline-success" (click)="addToCart(item)">Add to cart</button>      
+        <button class="btn btn-sm btn-outline-success" (click)="$event.stopPropagation(); addToCart(item)">Add to cart</button>      
       </div>
     </div>
   </div>

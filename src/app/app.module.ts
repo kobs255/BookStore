@@ -14,6 +14,7 @@ import { QtybtnComponent } from './components/qtybtn/qtybtn.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { CheckoutitemsComponent } from './components/checkoutitems/checkoutitems.component';
+import { ItemMoreInfoComponent } from './components/item-more-info/item-more-info.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CheckoutitemsComponent } from './components/checkoutitems/checkoutitems
     CheckoutComponent,
     PaginationComponent,
     CheckoutitemsComponent,
+    ItemMoreInfoComponent,
   ],
   exports: [
 
@@ -41,6 +43,7 @@ import { CheckoutitemsComponent } from './components/checkoutitems/checkoutitems
       { path: '', component: ItempageComponent },
       { path: 'cart/checkout', component: CheckoutComponent },
       { path: 'cart', component: CartComponent },
+      { path: ':id', component: ItemMoreInfoComponent },
     ])
   ],
   providers: [ItemService],
