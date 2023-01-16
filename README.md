@@ -24,10 +24,10 @@
   <li>Simple search feature to filter results.</li>
   <li>Pagination on store page</li>
   <li>Display items being purchased at checkout in a scrollable format.</li>
+  <li>Make each item clickable that forwards user to more info on the product.</li>
 </ul>
 <h2>Features Needing Implementation (in order of priority)</h2>
 <ul>
-  <li>Make each item clickable that forwards user to more info on the product.</li>
   <li>Page to display when the user hasn't added any products to their cart (cart is empty page).</li>
   <li>API to retrieve books to display on the product page and to store purchase order information.</li>
   <li>User session management.</li>
