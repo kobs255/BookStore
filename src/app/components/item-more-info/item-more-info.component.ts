@@ -13,7 +13,9 @@ export class ItemMoreInfoComponent implements OnInit {
   constructor(private route: ActivatedRoute, private bookService: ItemService) {
 
   }
-
+  addBook(item: Item | undefined) {
+    this.bookService.addItem(item!);
+  }
   ngOnInit() {
     this.route.params
       .subscribe(param => {

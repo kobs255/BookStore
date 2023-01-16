@@ -6,7 +6,7 @@
             <div class="row mt-3">
                 <div class="col">
                     <div class="col">{{book?.price | currency}}</div>
-                    <button class="btn btn-sm btn-outline-success mt-3 w-100" >Add to cart</button>
+                    <button class="btn btn-sm btn-outline-success mt-3 w-100" (click)="addBook(book)">Add to cart</button>
                 </div>
             </div>
         </div>
