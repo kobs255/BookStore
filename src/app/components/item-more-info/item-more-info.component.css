@@ -1,0 +1,27 @@
+.info-container {
+    margin: 3em 0 3em 0;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.bookImg {
+    text-align: center;
+}
+
+.details {
+    text-align: center;
+    margin: 3em auto;
+    max-width: 75%;
+
+}
+
+@media (max-width: 991px) {
+    .desc {
+        padding: 0;
+        margin: 2em 0 1em 0;
+    }
+
+}

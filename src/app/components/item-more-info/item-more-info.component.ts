@@ -17,6 +17,7 @@ export class ItemMoreInfoComponent implements OnInit {
   ngOnInit() {
     this.route.params
       .subscribe(param => {
+        //get book based on parameter value of 'id'
         this.book = this.bookService.getBookById(param['id']);
         console.log(this.book);
       })

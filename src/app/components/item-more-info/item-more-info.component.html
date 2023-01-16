@@ -1,1 +1,14 @@
-{{book | json}}
+<div class="info-container">
+    <h1 class="title">{{book?.title}}</h1>
+    <div class="row details">
+        <img class="col-sm-12 col-lg-6 bookImg"[src]="book?.itemImg" width="150px" height="350px"/>
+        <div class="col desc">{{book?.description}}
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="col">{{book?.price | currency}}</div>
+                    <button class="btn btn-sm btn-outline-success mt-3 w-100" >Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
