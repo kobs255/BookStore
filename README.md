@@ -11,9 +11,10 @@
 </ul>
 <h2>Technologies Needing Implementation</h2>
 <ul>
-  <li>ASP.net for WebAPI - Easy way to create endpoints for database access.</li>
+  <li>ASP.net for WebAPI - Used to create endpoints for database access.</li>
   <li>Microsoft SQL Server - RDBMS</li>
   <li>Something for session handling.</li>
+  <li>AutoMapper - Converts one object to another via property mapping.</li>
 </ul>
 
 <h2>Current Features</h2>
@@ -25,6 +26,7 @@
   <li>Pagination on store page</li>
   <li>Display items being purchased at checkout in a scrollable format.</li>
   <li>Make each item clickable that forwards user to more info on the product.</li>
+  <li>Persistent data storage</li>
 </ul>
 <h2>Features Needing Implementation (in order of priority)</h2>
 <ul>
