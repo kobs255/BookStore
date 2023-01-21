@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jkobs\\OneDrive\\Desktop\\angular-project\\cardapp\\src\\API\\API.csproj": {}
+    "C:\\Users\\jkobs\\OneDrive\\Desktop\\angular-project\\cardapp\\src\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jkobs\\OneDrive\\Desktop\\angular-project\\cardapp\\src\\API\\API.csproj": {
+    "C:\\Users\\jkobs\\OneDrive\\Desktop\\angular-project\\cardapp\\src\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jkobs\\OneDrive\\Desktop\\angular-project\\cardapp\\src\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\jkobs\\OneDrive\\Desktop\\angular-project\\cardapp\\src\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\jkobs\\OneDrive\\Desktop\\angular-project\\cardapp\\src\\API\\API.csproj",
+        "projectPath": "C:\\Users\\jkobs\\OneDrive\\Desktop\\angular-project\\cardapp\\src\\api\\API.csproj",
         "packagesPath": "C:\\Users\\jkobs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jkobs\\OneDrive\\Desktop\\angular-project\\cardapp\\src\\API\\obj\\",
+        "outputPath": "C:\\Users\\jkobs\\OneDrive\\Desktop\\angular-project\\cardapp\\src\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\jkobs\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.2, )"
@@ -85,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\program files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

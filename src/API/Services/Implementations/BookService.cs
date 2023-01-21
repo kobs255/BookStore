@@ -2,15 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Models.Dtos;
+using AutoMapper;
+
 namespace API.Services.Implementations
 {
   public class BookService : IBookService
   {
-    private DataContext _context;
-
-    public BookService(DataContext context)
+    private readonly DataContext _context;
+    private readonly Mapper _mapper;
+    public BookService(DataContext context, Mapper mapper)
     {
       this._context = context;
+      this._mapper = mapper;
     }
     //Shorter call to lookup book by id since it's used in multiple methods
     private async Task<Book> BookLookup(int id)
@@ -29,25 +33,27 @@ namespace API.Services.Implementations
       return books;
     }
 
-    public void RemoveBook(Book book)
+    public async void RemoveBook(Book book)
     {
       if (BookLookup(book.BookId) != null)
         _context.Books.Remove(book);
+      await _context.SaveChangesAsync();
     }
 
-    public Book CreateOrUpdateBook(Book book)
+    public async Task<Book> CreateOrUpdateBook(BookDto bookDto)
     {
+      Book book;
       //If book is not in db, add it
-      if (book.BookId == 0)
+      if (bookDto.BookId == 0)
       {
-        Book dbBook = _context.Books.Add(book).Entity;
-        book.BookId = dbBook.BookId;
+        book = _context.Books.Add(_mapper.Map<Book>(bookDto)).Entity;
       }
       else
       {
-
+        book = _mapper.Map<Book>(bookDto);
+        _context.Update(book);
       }
-
+      await _context.SaveChangesAsync();
       return book;
     }
   }
