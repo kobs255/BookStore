@@ -19,7 +19,9 @@ namespace API.Services.Implementations
     //Shorter call to lookup book by id since it's used in multiple methods
     private async Task<Book> BookLookup(int id)
     {
-      return await _context.Books.FindAsync(id);
+      return await _context.Books.FirstAsync(book => book.BookId == id);
+
+
     }
     public Task<Book> GetBookById(int id)
     {

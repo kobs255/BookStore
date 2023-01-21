@@ -43,3 +43,6 @@ Thumbs.db
 
 #Configuration Settings
 /src/API/appsettings.json
+/src/API/bin/
+/src/API/obj/
+
