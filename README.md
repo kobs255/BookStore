@@ -8,13 +8,13 @@
   <li>Bootstrap - Easier to format HTML elements with responsiveness.</li>
   <li>css - Used for minor element styling.</li>
   <li>HTML</li>
+  <li>AutoMapper - Converts one object to another via property mapping.</li>
+  <li>ASP.net for WebAPI - Used to create endpoints for database access.</li>
+  <li>Microsoft SQL Server - RDBMS</li>
 </ul>
 <h2>Technologies Needing Implementation</h2>
 <ul>
-  <li>ASP.net for WebAPI - Used to create endpoints for database access.</li>
-  <li>Microsoft SQL Server - RDBMS</li>
   <li>Something for session handling.</li>
-  <li>AutoMapper - Converts one object to another via property mapping.</li>
 </ul>
 
 <h2>Current Features</h2>
