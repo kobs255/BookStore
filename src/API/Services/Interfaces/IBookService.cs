@@ -8,9 +8,9 @@ namespace API.Services
 {
   public interface IBookService
   {
-    Task<IEnumerable<Book>> GetBooks();
+    Task<List<Book>> GetBooks();
     Task<Book> GetBookById(int id);
     Task<Book> CreateOrUpdateBook(BookDto bookDto);
-    void RemoveBook(Book book);
+    Task<Book> RemoveBook(int id);
   }
 }
